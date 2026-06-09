@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    TEMPLATE — copy this file to a real program name (e.g., intensive-outpatient-program.html)
+    and fill in the placeholders. Files prefixed with _ are skipped by the build.
+    Replace [PROGRAM_NAME], [program-slug], and [PROGRAM_ABBR] (e.g., IOP) throughout.
+  -->
+
+  <title>[PROGRAM_NAME] in [CITY], [STATE_ABBR] | [BRAND_NAME]</title>
+  <meta name="description" content="[140–160 chars. City + program. Example: 'Physician-led [PROGRAM_NAME] ([PROGRAM_ABBR]) in [CITY], [STATE_ABBR]. Structured addiction treatment that fits around work, school, and family.']">
+  <link rel="canonical" href="[CANONICAL_DOMAIN]/programs/[program-slug]/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[PROGRAM_NAME] in [CITY], [STATE_ABBR] | [BRAND_NAME]">
+  <meta property="og:description" content="[Same as meta description.]">
+  <meta property="og:image" content="[CANONICAL_DOMAIN]/images/[program-slug].webp">
+  <meta property="og:url" content="[CANONICAL_DOMAIN]/programs/[program-slug]/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[PROGRAM_NAME] in [CITY], [STATE_ABBR] | [BRAND_NAME]">
+  <meta name="twitter:description" content="[Same as meta description.]">
+  <meta name="twitter:image" content="[CANONICAL_DOMAIN]/images/[program-slug].webp">
+
+<!-- include:head-assets -->
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "[PROGRAM_NAME]",
+      "description": "[1–2 sentences on what this program is and who it's for.]",
+      "url": "[CANONICAL_DOMAIN]/programs/[program-slug]/",
+      "procedureType": "https://schema.org/NoninvasiveProcedure",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": "[BRAND_NAME]",
+        "telephone": "[PHONE_TEL]",
+        "url": "[CANONICAL_DOMAIN]/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "[STREET_ADDRESS]",
+          "addressLocality": "[CITY]",
+          "addressRegion": "[STATE_ABBR]",
+          "postalCode": "[ZIP]",
+          "addressCountry": "[COUNTRY_CODE]"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "[CANONICAL_DOMAIN]/" },
+        { "@type": "ListItem", "position": 2, "name": "Programs", "item": "[CANONICAL_DOMAIN]/#programs" },
+        { "@type": "ListItem", "position": 3, "name": "[PROGRAM_NAME]", "item": "[CANONICAL_DOMAIN]/programs/[program-slug]/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "[Common question about this program?]",
+          "acceptedAnswer": { "@type": "Answer", "text": "[2–4 sentences.]" }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+<!-- include:header -->
+
+  <main id="main">
+
+    <nav class="breadcrumb container" aria-label="Breadcrumb">
+      <a href="{{base}}index.html">Home</a>
+      <span aria-hidden="true">&rsaquo;</span>
+      <a href="{{base}}index.html#programs">Programs</a>
+      <span aria-hidden="true">&rsaquo;</span>
+      <span aria-current="page">[PROGRAM_NAME]</span>
+    </nav>
+
+    <section class="container section page-intro" aria-labelledby="page-title">
+      <h1 id="page-title">[PROGRAM_NAME] in [CITY], [STATE_ABBR]</h1>
+      <p class="page-lede">[1–2 sentence lede.]</p>
+      <a class="btn btn-dark btn-tel" href="tel:[PHONE_TEL]">Call [PHONE_DISPLAY]</a>
+    </section>
+
+    <section class="container section" aria-labelledby="what-title">
+      <h2 id="what-title">What Is [PROGRAM_NAME]?</h2>
+      <p>[draft — needs clinician review. Describe the program: what it is, who it's for, what to expect.]</p>
+    </section>
+
+    <section class="container section" aria-labelledby="includes-title">
+      <h2 id="includes-title">What [PROGRAM_NAME] Includes</h2>
+      <ul class="check-list">
+        <li>[Element 1]</li>
+        <li>[Element 2]</li>
+        <li>[Element 3]</li>
+      </ul>
+    </section>
+
+    <!-- Care continuum — link the sibling programs. Internal-linking rule: only
+         link the program names where they naturally appear in your prose.
+         Cross-link the other programs you offer (PHP, IOP, OP, detox, MAT, etc.)
+         to build the program cluster.
+    -->
+
+    <section class="container section" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>[Question 1]</summary>
+          <div class="faq-answer">
+            <p>[Answer — must match the FAQPage JSON-LD above.]</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="container section cta-section" aria-labelledby="cta-title">
+      <h2 id="cta-title">Start Your Recovery Today</h2>
+      <a class="cta-tel" href="tel:[PHONE_TEL]">[PHONE_DISPLAY]</a>
+    </section>
+
+  </main>
+
+<!-- include:footer -->
+
+</body>
+</html>

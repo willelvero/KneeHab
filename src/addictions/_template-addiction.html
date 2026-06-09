@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    TEMPLATE — copy to a real addiction/condition name (e.g., alcohol.html, anxiety.html)
+    and fill in the placeholders. Files prefixed with _ are skipped by the build.
+    Replace [CONDITION_NAME] and [condition-slug] throughout.
+
+    For mental-health clients, you may prefer src/conditions/ instead of src/addictions/.
+    Update the breadcrumb URL and folder path accordingly.
+  -->
+
+  <title>[CONDITION_NAME] Treatment in [CITY], [STATE_ABBR] | [BRAND_NAME]</title>
+  <meta name="description" content="[140–160 chars. City + condition + treatment.]">
+  <link rel="canonical" href="[CANONICAL_DOMAIN]/addictions/[condition-slug]/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[CONDITION_NAME] Treatment in [CITY], [STATE_ABBR] | [BRAND_NAME]">
+  <meta property="og:description" content="[Same as meta description.]">
+  <meta property="og:image" content="[CANONICAL_DOMAIN]/images/hero.webp">
+  <meta property="og:url" content="[CANONICAL_DOMAIN]/addictions/[condition-slug]/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[CONDITION_NAME] Treatment in [CITY], [STATE_ABBR] | [BRAND_NAME]">
+  <meta name="twitter:description" content="[Same as meta description.]">
+  <meta name="twitter:image" content="[CANONICAL_DOMAIN]/images/hero.webp">
+
+<!-- include:head-assets -->
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalCondition",
+      "name": "[Formal name, e.g., Alcohol Use Disorder]",
+      "alternateName": "[Common name, e.g., Alcohol Addiction]",
+      "description": "[1–2 sentence clinical description.]",
+      "url": "[CANONICAL_DOMAIN]/addictions/[condition-slug]/",
+      "signOrSymptom": [
+        { "@type": "MedicalSignOrSymptom", "name": "[Symptom 1]" },
+        { "@type": "MedicalSignOrSymptom", "name": "[Symptom 2]" }
+      ],
+      "possibleTreatment": [
+        { "@type": "MedicalProcedure", "name": "[Program 1 that treats this]" },
+        { "@type": "MedicalProcedure", "name": "[Program 2 that treats this]" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "[CANONICAL_DOMAIN]/" },
+        { "@type": "ListItem", "position": 2, "name": "What We Treat", "item": "[CANONICAL_DOMAIN]/#disorders" },
+        { "@type": "ListItem", "position": 3, "name": "[CONDITION_NAME] Treatment", "item": "[CANONICAL_DOMAIN]/addictions/[condition-slug]/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "[Common question?]",
+          "acceptedAnswer": { "@type": "Answer", "text": "[2–4 sentences.]" }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+<!-- include:header -->
+
+  <main id="main">
+
+    <nav class="breadcrumb container" aria-label="Breadcrumb">
+      <a href="{{base}}index.html">Home</a>
+      <span aria-hidden="true">&rsaquo;</span>
+      <a href="{{base}}index.html#disorders">What We Treat</a>
+      <span aria-hidden="true">&rsaquo;</span>
+      <span aria-current="page">[CONDITION_NAME]</span>
+    </nav>
+
+    <section class="container section page-intro" aria-labelledby="page-title">
+      <h1 id="page-title">[CONDITION_NAME] Treatment in [CITY], [STATE_ABBR]</h1>
+      <p class="page-lede">[1–2 sentence lede.]</p>
+      <a class="btn btn-dark btn-tel" href="tel:[PHONE_TEL]">Call [PHONE_DISPLAY]</a>
+    </section>
+
+    <section class="container section" aria-labelledby="what-title">
+      <h2 id="what-title">What Is [CONDITION_NAME]?</h2>
+      <p>[draft — needs clinician review. Plain-language explanation of the condition.]</p>
+    </section>
+
+    <section class="container section" aria-labelledby="signs-title">
+      <h2 id="signs-title">Signs of [CONDITION_NAME]</h2>
+      <ul class="check-list">
+        <li>[Sign 1]</li>
+        <li>[Sign 2]</li>
+        <li>[Sign 3]</li>
+      </ul>
+    </section>
+
+    <!-- "How We Treat" — link the programs that treat this condition.
+         Cross-link sibling conditions where they naturally appear in prose
+         (e.g., heroin page mentioning fentanyl). For child substance pages,
+         link UP to the parent category page (e.g., cocaine → stimulants).
+         Internal-linking rule: only link words that are already in your prose.
+    -->
+    <section class="container section" aria-labelledby="treat-title">
+      <h2 id="treat-title">How We Treat [CONDITION_NAME]</h2>
+      <p>Care is delivered through our <!-- link your programs here, e.g.,
+        <a href="{{base}}programs/outpatient-detox/">Outpatient Detox</a>,
+        <a href="{{base}}programs/intensive-outpatient-program/">IOP</a>, and
+        <a href="{{base}}programs/outpatient-program/">Outpatient Program</a>
+      --> levels of care, matched to how much structure you need.</p>
+    </section>
+
+    <section class="container section" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>[Question 1]</summary>
+          <div class="faq-answer">
+            <p>[Answer — must match the FAQPage JSON-LD above.]</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="container section cta-section" aria-labelledby="cta-title">
+      <h2 id="cta-title">Start Your Recovery Today</h2>
+      <a class="cta-tel" href="tel:[PHONE_TEL]">[PHONE_DISPLAY]</a>
+    </section>
+
+  </main>
+
+<!-- include:footer -->
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Update <loc> URLs to [CANONICAL_DOMAIN]. Add one <url> entry per public page.
+  Set <lastmod> to the most recent edit date of that page (ISO 8601: YYYY-MM-DD).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>[CANONICAL_DOMAIN]/</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>[CANONICAL_DOMAIN]/about/</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>[CANONICAL_DOMAIN]/contact/</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>[CANONICAL_DOMAIN]/verify-insurance/</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!--
+    Add one <url> block per program page. Example:
+    <url>
+      <loc>[CANONICAL_DOMAIN]/programs/intensive-outpatient-program/</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  -->
+
+  <!--
+    Add one <url> block per addiction/condition page. Example:
+    <url>
+      <loc>[CANONICAL_DOMAIN]/addictions/alcohol/</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  -->
+
+</urlset>
