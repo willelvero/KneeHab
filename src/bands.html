@@ -34,7 +34,7 @@
         "@type": "Offer",
         "url": "https://link.kneehabacademy.com/payment-link/6a31e64703b17c94f5716a8e",
         "priceCurrency": "USD",
-        "price": "44.99",
+        "price": "45.00",
         "availability": "https://schema.org/InStock"
       }
     },
@@ -58,13 +58,21 @@
   <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section id="bands-hero" class="section section-dark" aria-labelledby="bands-hero-title">
+    <section id="bands-hero" class="section section-dark bands-hero" aria-labelledby="bands-hero-title">
       <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container page-hero-inner reveal">
-        <p class="eyebrow eyebrow-pill"><span class="eyebrow-dot"></span>KneeHab Bands</p>
-        <h1 id="bands-hero-title" class="display-2xl">The Most Versatile Tool For Building <span class="volt">Stronger Knees.</span></h1>
-        <p class="lede">Designed to improve activation, blood flow, strength, stability, and resiliency.</p>
-        <a class="btn btn-volt btn-lg" href="#buy">Shop Bands</a>
+      <div class="container bands-hero-grid reveal">
+        <div class="page-hero-inner bands-hero-copy">
+          <p class="eyebrow eyebrow-pill"><span class="eyebrow-dot"></span>KneeHab Bands</p>
+          <h1 id="bands-hero-title" class="display-2xl">The Most Versatile Tool For Building <span class="volt">Stronger Knees.</span></h1>
+          <p class="lede">Designed to improve activation, blood flow, strength, stability, and resiliency.</p>
+          <a class="btn btn-volt btn-lg btn-arrow" href="https://link.kneehabacademy.com/payment-link/6a31e64703b17c94f5716a8e">Shop Bands<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <figure class="bands-hero-media">
+          <video autoplay muted loop playsinline controls preload="metadata"
+                 poster="{{base}}images/bands/bands-hero.webp" aria-label="KneeHab bands in use">
+            <source src="{{base}}videos/bands-hero.mp4#t=0.1" type="video/mp4">
+          </video>
+        </figure>
       </div>
     </section>
 
@@ -76,19 +84,41 @@
           <h2 id="why-bands-title" class="display-xl">Small Tool.<br><span class="volt">Big Difference.</span></h2>
           <p class="big-p">Bands let you load the knee with control — building the qualities that keep it healthy and resilient under real-world demand.</p>
           <p>Light enough to travel with, versatile enough to use anywhere, and precise enough to target exactly what your knees need.</p>
-          <a class="btn btn-volt btn-lg" href="#buy">Shop Bands</a>
+          <a class="btn btn-volt btn-lg btn-arrow" href="#buy">Shop Bands<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
 
         <div class="included reveal">
           <p class="included-label">What bands build</p>
-          <ul class="included-list">
+          <ul class="included-list included-list--numbered">
             <li>Activation</li>
             <li>Blood Flow</li>
             <li>Strength</li>
             <li>Stability</li>
             <li>Resiliency</li>
           </ul>
+          <img class="included-img" src="{{base}}images/bands/bands-hero.webp" width="430" height="430"
+               loading="lazy" alt="KneeHab resistance bands">
         </div>
+      </div>
+    </section>
+
+    <!-- ============ A CLOSER LOOK (GALLERY) ============ -->
+    <section id="closer-look" class="section section-dark" aria-labelledby="closer-look-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>A Closer Look</p>
+          <p class="closer-caption">A real image of what they look like:</p>
+        </div>
+
+        <figure class="gallery-card gallery-single reveal">
+          <img src="{{base}}images/bands/bands-real.jpg" width="1600" height="790" loading="lazy"
+               alt="The full set of KneeHab resistance bands shown in real use">
+        </figure>
+
+        <h2 id="closer-look-title" class="display-2xl closer-headline reveal">Built To <span class="volt">Last.</span></h2>
+        <p class="closer-cta reveal">
+          <a class="btn btn-volt btn-lg btn-arrow" href="https://link.kneehabacademy.com/payment-link/6a31e64703b17c94f5716a8e">Get Your Bands<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </p>
       </div>
     </section>
 
@@ -101,56 +131,34 @@
           <p class="big-p">From activation to performance — here's a sample of what you can do.</p>
         </div>
 
-        <!-- EXERCISES — replace placeholder names and descriptions with the real exercise library. -->
-        <div class="who-grid">
-          <article class="who-card reveal">
+        <!-- EXERCISES — draft names/descriptions; refine copy as needed. -->
+        <div class="exercise-grid">
+          <article class="who-card who-card--media reveal">
             <span class="who-index">01</span>
-            <h3>[Exercise Name]</h3>
-            <p>[One line on what it targets and why it matters for the knee.]</p>
+            <img class="who-media" src="{{base}}images/bands/exercise-hip-flexor.webp" width="430" height="430"
+                 loading="lazy" alt="90-degree hip flexor exercise with KneeHab band">
+            <div class="who-body">
+              <h3>90&deg; Hip Flexor</h3>
+              <p>Builds hip control and stability that takes load off the knee during running and cutting.</p>
+            </div>
           </article>
-          <article class="who-card reveal">
+          <article class="who-card who-card--media reveal">
             <span class="who-index">02</span>
-            <h3>[Exercise Name]</h3>
-            <p>[One line on what it targets and why it matters for the knee.]</p>
+            <img class="who-media" src="{{base}}images/bands/exercise-sissy-planks.webp" width="430" height="430"
+                 loading="lazy" alt="Banded sissy planks with KneeHab band">
+            <div class="who-body">
+              <h3>Banded Sissy Planks</h3>
+              <p>Strengthens the quads through deep knee flexion to build resilient, capable knees.</p>
+            </div>
           </article>
-          <article class="who-card reveal">
+          <article class="who-card who-card--media reveal">
             <span class="who-index">03</span>
-            <h3>[Exercise Name]</h3>
-            <p>[One line on what it targets and why it matters for the knee.]</p>
-          </article>
-          <article class="who-card reveal">
-            <span class="who-index">04</span>
-            <h3>[Exercise Name]</h3>
-            <p>[One line on what it targets and why it matters for the knee.]</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ REVIEWS ============ -->
-    <section id="reviews" class="section section-darker" aria-labelledby="reviews-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Reviews</p>
-          <h2 id="reviews-title" class="display-xl">What People<br>Are <span class="volt">Saying.</span></h2>
-        </div>
-
-        <!-- REVIEWS — replace placeholder quotes and names with real, verifiable customer reviews. -->
-        <div class="review-grid">
-          <article class="review-card reveal">
-            <p class="review-stars" aria-label="5 out of 5 stars">&starf;&starf;&starf;&starf;&starf;</p>
-            <blockquote>[Customer review quote goes here.]</blockquote>
-            <p class="review-author"><strong>[Name]</strong> &middot; [Role / Location]</p>
-          </article>
-          <article class="review-card reveal">
-            <p class="review-stars" aria-label="5 out of 5 stars">&starf;&starf;&starf;&starf;&starf;</p>
-            <blockquote>[Customer review quote goes here.]</blockquote>
-            <p class="review-author"><strong>[Name]</strong> &middot; [Role / Location]</p>
-          </article>
-          <article class="review-card reveal">
-            <p class="review-stars" aria-label="5 out of 5 stars">&starf;&starf;&starf;&starf;&starf;</p>
-            <blockquote>[Customer review quote goes here.]</blockquote>
-            <p class="review-author"><strong>[Name]</strong> &middot; [Role / Location]</p>
+            <img class="who-media" src="{{base}}images/bands/exercise-sl-tke.webp" width="430" height="430"
+                 loading="lazy" alt="Single-leg terminal knee extensions with KneeHab band">
+            <div class="who-body">
+              <h3>SL TKEs</h3>
+              <p>Targets terminal knee extension to restore full lockout strength and joint control.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -164,8 +172,8 @@
         <div class="final-body">
           <p>The most versatile tool for stronger, more resilient knees — ready whenever and wherever you train.</p>
         </div>
-        <p class="buy-price"><span class="buy-amount">$44.99</span></p>
-        <a class="btn btn-ink btn-lg" href="https://link.kneehabacademy.com/payment-link/6a31e64703b17c94f5716a8e">Shop Bands</a>
+        <p class="buy-price"><span class="buy-amount">$45</span></p>
+        <a class="btn btn-ink btn-lg btn-arrow" href="https://link.kneehabacademy.com/payment-link/6a31e64703b17c94f5716a8e">Shop Bands<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </section>
 

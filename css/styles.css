@@ -1136,3 +1136,143 @@ body.nav-open-lock { overflow: hidden; }
   .hero-stamp { width: 78px; top: -22px; right: -2px; }
   .hero-stamp-ring text { font-size: 9px; }
 }
+
+/* ============================================================
+   BANDS PAGE — product + exercise imagery
+   ============================================================ */
+
+/* Hero: copy + product shot, two columns */
+.bands-hero-grid {
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 1rem + 4vw, 4.5rem); align-items: center;
+}
+.bands-hero-copy { max-width: 38ch; }
+.bands-hero-media {
+  margin: 0; border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--ink-2);
+  max-width: 420px; margin-inline: auto;
+}
+.bands-hero-media img,
+.bands-hero-media video {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; background: #000;
+}
+
+/* Product gallery */
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+}
+.gallery-card {
+  margin: 0; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--ink-2);
+}
+.gallery-card img {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 1 / 1; object-fit: cover;
+  transition: transform .4s var(--ease);
+}
+.gallery-card:hover img { transform: scale(1.04); }
+
+/* "Built For The Comeback" — compact horizontal cards (badge beside text) */
+#who .who-grid { gap: 1rem; }
+#who .who-card {
+  display: grid; grid-template-columns: auto 1fr;
+  column-gap: 1.1rem; row-gap: 0.25rem; align-items: center;
+  padding: clamp(1.1rem, 0.85rem + 0.8vw, 1.5rem) clamp(1.3rem, 1rem + 1vw, 1.8rem);
+}
+#who .who-index {
+  grid-row: 1 / span 2; align-self: center;
+  margin: 0; font-size: 1.9rem;
+}
+#who .who-card h3 { align-self: end; margin: 0; }
+#who .who-card p { grid-column: 2; align-self: start; }
+
+/* Numbered variant — each point is a full-width pill */
+.included-list--numbered {
+  counter-reset: build;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
+.included-list--numbered li {
+  justify-content: flex-start; gap: 1.1rem;
+  width: 100%;
+  padding: 1rem 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;                 /* long oval / stadium */
+  background: var(--ink-3);
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+  font-weight: 600;
+}
+.included-list--numbered li:last-child { border-bottom: 1px solid var(--line); }
+.included-list--numbered li::before {
+  counter-increment: build;
+  content: counter(build);
+  width: 32px; height: 32px;
+  background: var(--volt);
+  -webkit-mask: none; mask: none;
+  color: var(--ink);
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Image inside the "What bands build" panel — fills the dead space */
+.included-img {
+  display: block; width: 100%; height: auto;
+  margin-top: 1.5rem; border-radius: 8px;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3; object-fit: cover;
+}
+
+/* Single full-width product image (replaces the 3-up grid) */
+.gallery-single { max-width: 880px; margin-inline: auto; }
+.gallery-single img { aspect-ratio: auto; }
+
+/* Caption above the image — same display font/style as "Built To Last" */
+.closer-caption {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.018em;
+  line-height: 0.92;
+  font-size: clamp(1.5rem, 1rem + 2.2vw, 2.6rem);
+  color: var(--bone);
+  margin: 0.6rem 0 0;
+}
+
+/* "Built To Last." — moved below the image, bigger + centered */
+.closer-headline {
+  text-align: center;
+  margin-top: clamp(1.8rem, 1rem + 3vw, 3rem);
+  font-size: clamp(3rem, 1.6rem + 7vw, 7rem);
+  line-height: 0.92;
+}
+.closer-cta { text-align: center; margin: clamp(1.4rem, 1rem + 1.5vw, 2.2rem) 0 0; }
+
+/* Exercise cards — image variant of .who-card */
+.exercise-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+}
+.who-card--media { padding: 0; display: flex; flex-direction: column; }
+.who-media {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 1 / 1; object-fit: cover;
+  border-bottom: 1px solid var(--line-ink);
+}
+.who-card--media .who-body {
+  padding: clamp(1.4rem, 1rem + 1.2vw, 1.9rem);
+}
+.who-card--media .who-index {
+  position: absolute; top: 0.8rem; left: 0.9rem; z-index: 2; margin: 0;
+  font-size: 1.6rem; color: var(--bone); -webkit-text-stroke: 0;
+  background: rgba(11,12,14,0.62); padding: 0.05rem 0.5rem; border-radius: 4px;
+}
+.who-card--media:hover .who-index { color: var(--volt); }
+
+@media (max-width: 960px) {
+  .bands-hero-grid { grid-template-columns: 1fr; }
+  .bands-hero-copy { max-width: 100%; }
+  .bands-hero-media { max-width: 460px; margin-inline: auto; }
+  .gallery-grid, .exercise-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .gallery-grid, .exercise-grid { grid-template-columns: 1fr; }
+}
