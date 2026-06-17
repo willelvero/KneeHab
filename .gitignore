@@ -5,3 +5,6 @@ node_modules/
 .env.local
 .idea/
 .vscode/
+
+# Large local video previews — host on a CDN for production
+videos/

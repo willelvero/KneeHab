@@ -11,12 +11,14 @@
   function closeNav() {
     if (!nav) return;
     nav.classList.remove('is-open');
+    document.body.classList.remove('nav-open-lock');
     if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
   }
 
   if (openBtn && nav) {
     openBtn.addEventListener('click', function () {
       nav.classList.add('is-open');
+      document.body.classList.add('nav-open-lock');
       openBtn.setAttribute('aria-expanded', 'true');
     });
   }
@@ -28,6 +30,25 @@
   }
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeNav();
+  });
+
+  // --- Video carousels (prev/next + single-play) ---
+  var carBtns = document.querySelectorAll('.carousel-btn');
+  carBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var section = btn.closest('section');
+      var track = section && section.querySelector('.carousel-track');
+      if (!track) return;
+      var card = track.querySelector('.vid-card');
+      var step = card ? card.getBoundingClientRect().width + 18 : 280;
+      track.scrollBy({ left: btn.getAttribute('data-dir') === 'next' ? step : -step, behavior: 'smooth' });
+    });
+  });
+  var vids = document.querySelectorAll('.vid-el');
+  vids.forEach(function (v) {
+    v.addEventListener('play', function () {
+      vids.forEach(function (o) { if (o !== v) o.pause(); });
+    });
   });
 
   // --- Sticky header state on scroll ---

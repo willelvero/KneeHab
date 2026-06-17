@@ -23,7 +23,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"></noscript>
 
-  <link rel="stylesheet" href="css/styles.min.css?v=1">
+  <link rel="stylesheet" href="css/styles.min.css?v=4">
 
 
   <script type="application/ld+json">
@@ -65,6 +65,18 @@
         "url": "https://kneehabacademy.com/",
         "name": "KneeHab",
         "publisher": { "@id": "https://kneehabacademy.com/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Do I need any equipment?", "acceptedAnswer": { "@type": "Answer", "text": "Very little. Most people start with their bodyweight and a set of resistance bands, and your coach scales every exercise to whatever you have access to." } },
+          { "@type": "Question", "name": "I'm an older athlete — can I still see results?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with people well into their 50s and beyond. The system meets you where you are and progresses at a pace your body can handle." } },
+          { "@type": "Question", "name": "I'm not trying to dunk — I just want to move without pain. Is this still for me?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. The goal is a knee you trust, whether that means returning to sport or just hiking, lifting, and living without hesitation." } },
+          { "@type": "Question", "name": "I can only train a few times a week. Is that a problem?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your plan is built around your schedule. Consistency over time matters far more than how many days a week you can train." } },
+          { "@type": "Question", "name": "I've already finished physical therapy. How is this different?", "acceptedAnswer": { "@type": "Answer", "text": "Physical therapy gets you cleared. KneeHab bridges the gap between being cleared and being prepared for real-world performance and the activities you love." } },
+          { "@type": "Question", "name": "Is coaching online? I live outside the US.", "acceptedAnswer": { "@type": "Answer", "text": "Yes — coaching is fully online, so you can work with us from anywhere in the world." } },
+          { "@type": "Question", "name": "Is this a substitute for medical care?", "acceptedAnswer": { "@type": "Answer", "text": "No. KneeHab is coaching and education, not a substitute for individualized medical care. Always follow the guidance of your own healthcare provider." } }
+        ]
       }
     ]
   }
@@ -77,22 +89,20 @@
   <header id="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="KneeHab home">
-        <span class="logo-mark" aria-hidden="true"></span>
-        Knee<span class="logo-accent">Hab</span>
+        <img src="images/kneehab-logo.png" alt="KneeHab Academy" class="logo-img" width="2120" height="524">
       </a>
 
       <nav id="primary-nav" aria-label="Primary">
         <button id="nav-close" class="nav-close" aria-label="Close menu">&#10005;</button>
         <ul class="nav-list">
-          <li><a href="#coaching">Coaching</a></li>
-          <li><a href="[BANDS_URL]">Bands</a></li>
-          <li><a href="[MERCH_URL]">Merch</a></li>
-          <li><a href="[PRO_URL]">KneeHab Pro</a></li>
-          <li><a href="#results">Testimonials</a></li>
+          <li><a href="coaching/index.html">1:1 Coaching</a></li>
+          <li><a href="bands/index.html">Bands</a></li>
+          <li><a href="merch/index.html">Merch</a></li>
+          <li><a href="testimonials/index.html">Testimonials</a></li>
         </ul>
       </nav>
 
-      <a class="btn btn-outline-volt header-cta" href="[ASSESSMENT_URL]">Free Knee Assessment</a>
+      <a class="btn btn-outline-volt header-cta" href="https://quiz.kneehabacademy.com">Free Knee Assessment</a>
 
       <button id="nav-open" class="nav-open" aria-label="Open menu" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -112,7 +122,7 @@
           <h1 id="hero-title">Build A Body<br><span class="volt">You Can Trust.</span></h1>
           <p class="lede">Most people stop training when the pain goes away. That's exactly why they never regain the confidence, athleticism, and resilience they had before injury.</p>
           <p class="lede lede-muted">KneeHab bridges the gap between recovery and performance through personalized coaching, proven systems, and training that prepares you for real life.</p>
-          <a class="btn btn-volt btn-lg" href="[ASSESSMENT_URL]">Take The Free Knee Assessment</a>
+          <a class="btn btn-volt btn-lg" href="https://quiz.kneehabacademy.com">Take The Free Knee Assessment</a>
         </div>
 
         <div class="hero-video reveal">
@@ -132,17 +142,20 @@
             </div>
           </div>
 
-          <p class="hero-video-caption"><strong>How I bulletproofed my knees</strong> &mdash; after 3 ACL tears &amp; 5 surgeries.</p>
+          <p class="hero-video-caption">
+            <strong>How I bulletproofed my knees</strong>
+            <span class="hero-video-subcaption">After 3 ACL tears &amp; 5 surgeries</span>
+          </p>
         </div>
       </div>
 
       <div class="trust-ticker" aria-label="Trust indicators">
         <div class="ticker-track">
-          <span class="ticker-item"><strong>1,700+</strong> Success Stories</span><span class="ticker-sep">/</span>
+          <span class="ticker-item"><strong>2,000+</strong> Success Stories</span><span class="ticker-sep">/</span>
           <span class="ticker-item">Athletes &amp; Active Adults Worldwide</span><span class="ticker-sep">/</span>
           <span class="ticker-item">Trusted By Professional Athletes</span><span class="ticker-sep">/</span>
           <span class="ticker-item">Personalized Coaching</span><span class="ticker-sep">/</span>
-          <span class="ticker-item" aria-hidden="true"><strong>1,700+</strong> Success Stories</span><span class="ticker-sep" aria-hidden="true">/</span>
+          <span class="ticker-item" aria-hidden="true"><strong>2,000+</strong> Success Stories</span><span class="ticker-sep" aria-hidden="true">/</span>
           <span class="ticker-item" aria-hidden="true">Athletes &amp; Active Adults Worldwide</span><span class="ticker-sep" aria-hidden="true">/</span>
           <span class="ticker-item" aria-hidden="true">Trusted By Professional Athletes</span><span class="ticker-sep" aria-hidden="true">/</span>
           <span class="ticker-item" aria-hidden="true">Personalized Coaching</span><span class="ticker-sep" aria-hidden="true">/</span>
@@ -185,23 +198,28 @@
         <ol class="chain reveal" aria-label="The kinetic chain">
           <li class="chain-link">
             <span class="chain-index">01</span>
-            <span class="chain-part">Feet</span>
+            <span class="chain-part">Feet/Ankles</span>
             <span class="chain-role">absorb force</span>
           </li>
           <li class="chain-link">
             <span class="chain-index">02</span>
-            <span class="chain-part">Hips</span>
+            <span class="chain-part">Quads &amp; Hamstrings</span>
             <span class="chain-role">create force</span>
           </li>
           <li class="chain-link">
             <span class="chain-index">03</span>
-            <span class="chain-part">Core</span>
-            <span class="chain-role">transfers force</span>
+            <span class="chain-part">Hips</span>
+            <span class="chain-role">transfer force</span>
+          </li>
+          <li class="chain-link">
+            <span class="chain-index">04</span>
+            <span class="chain-part">Core &amp; Lower Back</span>
+            <span class="chain-role">drive force</span>
           </li>
           <li class="chain-link chain-link--focus">
-            <span class="chain-index">04</span>
-            <span class="chain-part">Knee</span>
-            <span class="chain-role">sits in the middle</span>
+            <span class="chain-index">05</span>
+            <span class="chain-part">Knees</span>
+            <span class="chain-role">the engine of it all</span>
           </li>
         </ol>
       </div>
@@ -223,17 +241,27 @@
           </li>
           <li class="method-step reveal">
             <span class="method-num">02</span>
-            <h3>Structural Strength</h3>
-            <p>Address weaknesses. Build capacity. Create a stronger foundation.</p>
+            <h3>Pinpointing Weaknesses</h3>
+            <p>Find the weak links in your chain and address the root causes others miss.</p>
           </li>
           <li class="method-step reveal">
             <span class="method-num">03</span>
-            <h3>Resiliency</h3>
-            <p>Learn to absorb, control, and redirect force with confidence.</p>
+            <h3>Maximizing Resiliency</h3>
+            <p>Build the capacity to absorb, control, and redirect force without breaking down.</p>
           </li>
           <li class="method-step reveal">
             <span class="method-num">04</span>
-            <h3>Performance</h3>
+            <h3>Peak Power</h3>
+            <p>Turn new strength into usable, explosive force you can apply on demand.</p>
+          </li>
+          <li class="method-step reveal">
+            <span class="method-num">05</span>
+            <h3>Scaling Performance</h3>
+            <p>Progress the intensity and complexity to match the demands of your sport and life.</p>
+          </li>
+          <li class="method-step reveal">
+            <span class="method-num">06</span>
+            <h3>Explosive Athlete</h3>
             <p>Jump. Cut. Sprint. Land. Move with confidence in the activities that matter most to you.</p>
           </li>
         </ol>
@@ -304,92 +332,54 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span>Real Results</p>
-          <h2 id="results-title" class="display-xl"><span class="volt">1,700+</span> Comebacks<br>And Counting.</h2>
+          <h2 id="results-title" class="display-xl"><span class="volt">2,000+</span> Comebacks<br>And Counting.</h2>
           <p class="big-p">Real people. Real stories. Real results.</p>
         </div>
 
-        <!-- TESTIMONIAL VIDEOS:
-             Replace each placeholder frame below with the matching testimonial embed.
-             These are typically vertical (portrait) reels. -->
-        <div class="testimonial-grid">
-          <figure class="video-frame video-9x16 reveal" data-video="jonas">
-            <div class="video-poster">
-              <button class="video-play" type="button" aria-label="Play Jonas Griffith testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-              <span class="video-note">[INSERT JONAS GRIFFITH TESTIMONIAL VIDEO]</span>
-            </div>
-            <figcaption><strong>Jonas Griffith</strong><span>Professional Athlete</span></figcaption>
-          </figure>
-
-          <figure class="video-frame video-9x16 reveal" data-video="ana">
-            <div class="video-poster">
-              <button class="video-play" type="button" aria-label="Play Ana testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-              <span class="video-note">[INSERT ANA TESTIMONIAL VIDEO]</span>
-            </div>
-            <figcaption><strong>Ana</strong><span>Active Adult</span></figcaption>
-          </figure>
-
-          <figure class="video-frame video-9x16 reveal" data-video="nacho">
-            <div class="video-poster">
-              <button class="video-play" type="button" aria-label="Play Nacho testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-              <span class="video-note">[INSERT NACHO TESTIMONIAL VIDEO]</span>
-            </div>
-            <figcaption><strong>Nacho</strong><span>Return To Sport</span></figcaption>
-          </figure>
-
-          <figure class="video-frame video-9x16 reveal" data-video="vyson">
-            <div class="video-poster">
-              <button class="video-play" type="button" aria-label="Play Vyson testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-              <span class="video-note">[INSERT VYSON TESTIMONIAL VIDEO]</span>
-            </div>
-            <figcaption><strong>Vyson</strong><span>Comeback Story</span></figcaption>
-          </figure>
-        </div>
-
         <div class="section-action reveal">
-          <a class="btn btn-volt btn-lg" href="testimonials/">See More Testimonials</a>
+          <a class="btn btn-volt btn-lg" href="testimonials/index.html">See More Testimonials</a>
         </div>
       </div>
     </section>
 
-    <!-- ============ SECTION 8 — FOUNDER STORY ============ -->
-    <section id="story" class="section section-darker" aria-labelledby="story-title">
-      <div class="container story-grid">
-        <div class="story-video reveal">
-          <!-- FOUNDER VIDEO:
-               Replace with the live "Matthew's Journey / Adversity Is Opportunity" embed
-               from https://kneehabacademy.com/. -->
-          <figure class="video-frame video-16x9" data-video="founder">
-            <div class="video-poster">
-              <button class="video-play" type="button" aria-label="Play Matthew's journey video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
-              <span class="video-tag">Matthew's Journey</span>
-              <span class="video-note">[INSERT MATTHEW'S JOURNEY VIDEO EMBED]</span>
-            </div>
-          </figure>
+    <!-- ============ SECTION 8 — FAQ ============ -->
+    <section id="faq" class="section section-light" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal" style="text-align:center;margin-inline:auto;">
+          <p class="eyebrow eyebrow-ink" style="justify-content:center;"><span class="eyebrow-dot"></span>FAQ</p>
+          <h2 id="faq-title" class="display-xl ink">Still Have Questions?</h2>
         </div>
 
-        <div class="story-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Founder Story</p>
-          <h2 id="story-title" class="display-xl">Adversity Is<br><span class="volt">Opportunity.</span></h2>
-          <p class="big-p">After three ACL tears, five surgeries, and being medically disqualified from football, Matthew realized something: the healthcare system helped him recover — but it didn't prepare him to perform.</p>
-          <p>That realization led to years of study, testing, coaching, and refinement. Today, KneeHab has helped thousands of people rebuild confidence, resilience, and trust in their bodies.</p>
-          <ul class="stat-chips">
-            <li><strong>3</strong> ACL Tears</li>
-            <li><strong>5</strong> Surgeries</li>
-            <li><strong>1,700+</strong> Comebacks</li>
-          </ul>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Do I need any equipment?</summary>
+            <div class="faq-answer"><p>Very little. Most people start with their bodyweight and a set of resistance bands, and your coach scales every exercise to whatever you have access to.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>I'm an older athlete &mdash; can I still see results?</summary>
+            <div class="faq-answer"><p>Yes. We work with people well into their 50s and beyond. The system meets you where you are and progresses at a pace your body can handle.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>I'm not trying to dunk &mdash; I just want to move without pain. Is this still for me?</summary>
+            <div class="faq-answer"><p>Absolutely. The goal is a knee you trust, whether that means returning to sport or just hiking, lifting, and living without hesitation.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>I can only train a few times a week. Is that a problem?</summary>
+            <div class="faq-answer"><p>No. Your plan is built around your schedule. Consistency over time matters far more than how many days a week you can train.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>I've already finished physical therapy. How is this different?</summary>
+            <div class="faq-answer"><p>Physical therapy gets you cleared. KneeHab bridges the gap between being cleared and being prepared for real-world performance and the activities you love.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is coaching online? I live outside the US.</summary>
+            <div class="faq-answer"><p>Yes &mdash; coaching is fully online, so you can work with us from anywhere in the world.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is this a substitute for medical care?</summary>
+            <div class="faq-answer"><p>No. KneeHab is coaching and education, not a substitute for individualized medical care. Always follow the guidance of your own healthcare provider.</p></div>
+          </details>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ SECTION 9 — FINAL CTA ============ -->
-    <section id="start" class="final-cta" aria-labelledby="final-title">
-      <div class="container final-inner reveal">
-        <p class="eyebrow eyebrow-ink"><span class="eyebrow-dot"></span>Your Comeback Starts Here</p>
-        <h2 id="final-title" class="display-2xl ink">The Goal Was Never<br>To Fix Your Knee.</h2>
-        <div class="final-body">
-          <p>The goal is to help you trust your body again. To move without hesitation. To perform without fear. To become more capable than you were before.</p>
-        </div>
-        <a class="btn btn-ink btn-lg" href="[ASSESSMENT_URL]">Start Your Comeback</a>
       </div>
     </section>
 
@@ -399,18 +389,17 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo" aria-label="KneeHab home">
-          <span class="logo-mark" aria-hidden="true"></span>
-          Knee<span class="logo-accent">Hab</span>
+          <img src="images/kneehab-logo.png" alt="KneeHab Academy" class="logo-img" width="2120" height="524">
         </a>
         <p class="footer-tagline">Bridging the gap between recovery and performance — for athletes and active adults who refuse to settle for "cleared."</p>
-        <a class="btn btn-volt" href="[ASSESSMENT_URL]">Take The Free Knee Assessment</a>
+        <a class="btn btn-volt" href="https://quiz.kneehabacademy.com">Take The Free Knee Assessment</a>
       </div>
 
       <nav class="footer-col" aria-label="Footer">
         <div class="footer-meta-label">Explore</div>
         <a href="#problem">The Problem</a>
         <a href="#method">The Method</a>
-        <a href="#coaching">Coaching</a>
+        <a href="coaching/index.html">Coaching</a>
         <a href="#results">Results</a>
         <a href="#story">Founder Story</a>
       </nav>
@@ -436,7 +425,7 @@
     </div>
   </footer>
 
-  <script src="js/main.min.js?v=1" defer></script>
+  <script src="js/main.min.js?v=3" defer></script>
 
 
 </body>
