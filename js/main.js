@@ -45,17 +45,41 @@
       var scope = btn.closest('.carousel-panel') || btn.closest('section');
       var track = scope && scope.querySelector('.carousel-track');
       if (!track) return;
-      var card = track.querySelector('.vid-card');
+      var card = track.querySelector('.vid-card, .method-step');
       var step = card ? card.getBoundingClientRect().width + 18 : 280;
       track.scrollBy({ left: btn.getAttribute('data-dir') === 'next' ? step : -step, behavior: 'smooth' });
     });
   });
-  var vids = document.querySelectorAll('.vid-el');
-  vids.forEach(function (v) {
-    v.addEventListener('play', function () {
-      vids.forEach(function (o) { if (o !== v) o.pause(); });
+  // --- Auto-play looping preview videos while they're on screen ---
+  // Videos start muted + looped; IntersectionObserver plays the ones in view
+  // and pauses the rest (keeps the page fast). Unmuting one mutes the others
+  // so you never get overlapping audio.
+  var previews = document.querySelectorAll('video[loop]');
+  if (previews.length) {
+    previews.forEach(function (v) {
+      v.addEventListener('volumechange', function () {
+        if (!v.muted) {
+          previews.forEach(function (o) { if (o !== v) o.muted = true; });
+        }
+      });
     });
-  });
+
+    var reduceVid = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceVid && 'IntersectionObserver' in window) {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.5 });
+      previews.forEach(function (v) { vio.observe(v); });
+    }
+  }
 
   // --- Results carousel: dropdown switches the active category panel ---
   var resultsFilter = document.getElementById('results-cat');

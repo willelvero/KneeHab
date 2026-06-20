@@ -87,12 +87,12 @@
     <section id="coaching-hero" class="section section-dark" aria-labelledby="coaching-hero-title">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container page-hero-inner reveal">
-        <p class="eyebrow eyebrow-pill"><span class="eyebrow-dot"></span>1-on-1 Coaching</p>
+        <p class="eyebrow eyebrow-pill"><span class="eyebrow-dot"></span>Coaching</p>
         <h1 id="coaching-hero-title" class="display-2xl">See It In <span class="volt">Action.</span></h1>
       </div>
       <div class="container hero-video-wrap reveal">
         <div class="video-embed">
-          <video controls preload="metadata" playsinline
+          <video controls preload="metadata" playsinline muted loop
             poster="{{base}}images/coaching-blueprint-poster.jpg"
             src="{{base}}videos/coaching-blueprint.mp4#t=0.1">
             Your browser does not support the video tag.
@@ -101,44 +101,68 @@
       </div>
       <div class="container page-hero-inner hero-cta-below reveal">
         <p class="lede">Personalized coaching — your own roadmap, expert accountability, and a plan that adapts as you progress.</p>
-        <a class="btn btn-volt btn-lg" href="https://kneehabacademy.com/free-evaluation">Book A Call</a>
+        <a class="btn btn-volt btn-lg btn-arrow" href="https://kneehabacademy.com/free-evaluation">Book A Call<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </section>
 
     <!-- ============ THE KNEEHAB METHOD ============ -->
     <section id="method" class="section section-darker" aria-labelledby="method-title">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>The KneeHab Method</p>
-          <h2 id="method-title" class="display-xl">A Proven System For<br>Long-Term Results</h2>
+        <div class="carousel-head reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span>The KneeHab Method</p>
+            <h2 id="method-title" class="display-xl">A Proven System For<br>Long-Term Results</h2>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-btn" type="button" data-dir="prev" aria-label="Previous phases">&lsaquo;</button>
+            <button class="carousel-btn" type="button" data-dir="next" aria-label="Next phases">&rsaquo;</button>
+          </div>
         </div>
 
-        <ol class="method-grid">
-          <li class="method-step reveal" title="Restore connection between the brain and body. Improve blood flow. Build awareness and control.">
-            <span class="method-num">01</span>
-            <h3>Activation</h3>
+        <div class="carousel reveal"><ol class="carousel-track method-track">
+          <li class="method-step">
+            <div class="method-step-head">
+              <h3>Activation</h3>
+              <span class="method-num">01</span>
+            </div>
+            <p class="method-desc">Reconnect the brain to the knee — restoring blood flow, awareness, and control.</p>
           </li>
-          <li class="method-step reveal" title="Find the weak links in your chain and address the root causes others miss.">
-            <span class="method-num">02</span>
-            <h3>Pinpointing Weaknesses</h3>
+          <li class="method-step">
+            <div class="method-step-head">
+              <h3>Pinpointing Weaknesses</h3>
+              <span class="method-num">02</span>
+            </div>
+            <p class="method-desc">Find the weak links in your chain and fix the root causes others miss.</p>
           </li>
-          <li class="method-step reveal" title="Build the capacity to absorb, control, and redirect force without breaking down.">
-            <span class="method-num">03</span>
-            <h3>Maximizing Resiliency</h3>
+          <li class="method-step">
+            <div class="method-step-head">
+              <h3>Maximizing Resiliency</h3>
+              <span class="method-num">03</span>
+            </div>
+            <p class="method-desc">Build tissue that absorbs and redirects force without breaking down again.</p>
           </li>
-          <li class="method-step reveal" title="Turn new strength into usable, explosive force you can apply on demand.">
-            <span class="method-num">04</span>
-            <h3>Peak Power</h3>
+          <li class="method-step">
+            <div class="method-step-head">
+              <h3>Peak Power</h3>
+              <span class="method-num">04</span>
+            </div>
+            <p class="method-desc">Turn raw strength into explosive force you can produce on demand.</p>
           </li>
-          <li class="method-step reveal" title="Progress the intensity and complexity to match the demands of your sport and life.">
-            <span class="method-num">05</span>
-            <h3>Scaling Performance</h3>
+          <li class="method-step">
+            <div class="method-step-head">
+              <h3>Maximizing Performance</h3>
+              <span class="method-num">05</span>
+            </div>
+            <p class="method-desc">Ramp intensity and complexity to match the real demands of your sport.</p>
           </li>
-          <li class="method-step reveal" title="Jump. Cut. Sprint. Land. Move with confidence in the activities that matter most to you.">
-            <span class="method-num">06</span>
-            <h3>Explosive Athlete</h3>
+          <li class="method-step">
+            <div class="method-step-head">
+              <h3>Explosive Athlete</h3>
+              <span class="method-num">06</span>
+            </div>
+            <p class="method-desc">Jump, cut, sprint, and land with full confidence in what matters most.</p>
           </li>
-        </ol>
+        </ol></div>
       </div>
     </section>
 
@@ -153,19 +177,38 @@
         <div class="faq-list reveal">
           <details class="faq-item">
             <summary>Post-Surgery Recovery</summary>
-            <div class="faq-answer"><p>Bridge the gap between rehabilitation and real-world performance.</p></div>
+            <div class="faq-answer">
+              <p>Bridge the gap between rehabilitation and real-world performance. We pick up where standard physical therapy stops and keep rebuilding your knee until it's ready for everything you did before — and then some.</p>
+              <a class="faq-more" href="{{base}}testimonials/index.html#cat-acl">See more<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Prehab</summary>
+            <div class="faq-answer">
+              <p>Go into surgery strong so you come out ahead. Building strength, control, and range of motion before your operation sets up a faster, smoother recovery on the other side.</p>
+              <a class="faq-more" href="{{base}}testimonials/index.html#cat-prehab">See more<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </details>
           <details class="faq-item">
             <summary>Chronic Knee Pain</summary>
-            <div class="faq-answer"><p>Address root causes instead of managing symptoms forever.</p></div>
+            <div class="faq-answer">
+              <p>Address the root causes instead of managing symptoms forever. We find out why your knee hurts, then rebuild the strength and mechanics that make the pain stop for good.</p>
+              <a class="faq-more" href="{{base}}testimonials/index.html#cat-knee-pain">See more<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </details>
           <details class="faq-item">
             <summary>Active Adults</summary>
-            <div class="faq-answer"><p>Continue hiking, lifting, traveling, and doing the activities you love.</p></div>
+            <div class="faq-answer">
+              <p>Keep hiking, lifting, traveling, and doing the activities you love. Age doesn't have to mean slowing down — we'll keep your knees strong and capable for the long haul.</p>
+              <a class="faq-more" href="{{base}}testimonials/index.html#cat-over-45">See more<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </details>
           <details class="faq-item">
             <summary>Athletes</summary>
-            <div class="faq-answer"><p>Return to sport stronger, more resilient, and more prepared than before.</p></div>
+            <div class="faq-answer">
+              <p>Return to sport stronger, more resilient, and more prepared than before. We don't just get you back on the field — we make sure your knee can handle everything your sport demands of it.</p>
+              <a class="faq-more" href="{{base}}testimonials/index.html#cat-athleticism">See more<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </details>
         </div>
       </div>
@@ -179,7 +222,7 @@
           <h2 id="what-title" class="display-xl">Everything You Need To<br><span class="volt">Move Forward.</span></h2>
           <p class="big-p">Coaching isn't a PDF and a "good luck." It's a complete support system built around you and your knees.</p>
           <p>Your coach knows your history, watches your reps, and adjusts the plan as you progress — so you always know exactly what to do next and why.</p>
-          <a class="btn btn-volt btn-lg" href="#apply">Apply For Coaching</a>
+          <a class="btn btn-volt btn-lg btn-arrow" href="https://kneehabacademy.com/free-evaluation">Book A Call<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
 
         <div class="included reveal">
@@ -197,73 +240,6 @@
       </div>
     </section>
 
-    <!-- ============ HOW COACHING WORKS ============ -->
-    <section id="how-it-works" class="section section-light" aria-labelledby="how-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow eyebrow-ink"><span class="eyebrow-dot"></span>How Coaching Works</p>
-          <h2 id="how-title" class="display-xl ink">From Application To<br>Comeback</h2>
-          <p class="big-p">A clear, four-step path — no guesswork about what happens next.</p>
-        </div>
-
-        <div class="who-grid">
-          <article class="who-card reveal">
-            <span class="who-index">01</span>
-            <h3>Apply</h3>
-            <p>Tell us about your injury history, your goals, and what you're trying to get back to.</p>
-          </article>
-          <article class="who-card reveal">
-            <span class="who-index">02</span>
-            <h3>Assessment</h3>
-            <p>We review your movement and history, then pair you with the right coach for your situation.</p>
-          </article>
-          <article class="who-card reveal">
-            <span class="who-index">03</span>
-            <h3>Your Roadmap</h3>
-            <p>You get a customized plan built around your body, your schedule, and the outcome you want.</p>
-          </article>
-          <article class="who-card reveal">
-            <span class="who-index">04</span>
-            <h3>Coach &amp; Adjust</h3>
-            <p>Coaching calls, form reviews, and ongoing adjustments keep you progressing every week.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MEET THE COACHES ============ -->
-    <section id="coaches" class="section section-dark" aria-labelledby="coaches-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>Meet The Coaches</p>
-          <h2 id="coaches-title" class="display-xl">Coaches Who've Been<br>Where <span class="volt">You Are.</span></h2>
-          <p class="big-p">Real practitioners who understand recovery from the inside — not just the textbook.</p>
-        </div>
-
-        <!-- COACH BIOS — replace placeholder names, roles, and photos with the real coaching team. -->
-        <div class="coach-grid">
-          <article class="coach-card reveal">
-            <div class="coach-photo" aria-hidden="true"><span>[PHOTO]</span></div>
-            <h3>[Coach Name]</h3>
-            <p class="coach-role">Founder &amp; Head Coach</p>
-            <p>After three ACL tears and five surgeries, Matthew built the system KneeHab is based on.</p>
-          </article>
-          <article class="coach-card reveal">
-            <div class="coach-photo" aria-hidden="true"><span>[PHOTO]</span></div>
-            <h3>[Coach Name]</h3>
-            <p class="coach-role">Performance Coach</p>
-            <p>[Short bio — credentials, specialty, and who this coach loves working with.]</p>
-          </article>
-          <article class="coach-card reveal">
-            <div class="coach-photo" aria-hidden="true"><span>[PHOTO]</span></div>
-            <h3>[Coach Name]</h3>
-            <p class="coach-role">Rehab Coach</p>
-            <p>[Short bio — credentials, specialty, and who this coach loves working with.]</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ SUCCESS STORIES ============ -->
     <section id="success-stories" class="section section-darker" aria-labelledby="stories-title">
       <div class="container">
@@ -274,7 +250,7 @@
         </div>
 
         <div class="section-action reveal">
-          <a class="btn btn-outline-volt btn-lg" href="{{base}}testimonials/index.html">See More Success Stories</a>
+          <a class="btn btn-outline-volt btn-lg btn-arrow" href="{{base}}testimonials/index.html">See More Success Stories<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
     </section>
@@ -324,7 +300,7 @@
         <div class="final-body">
           <p>Spots are limited so every client gets real attention. Apply today and we'll be in touch about next steps.</p>
         </div>
-        <a class="btn btn-ink btn-lg" href="[APPLICATION_URL]">Apply For Coaching</a>
+        <a class="btn btn-ink btn-lg btn-arrow" href="https://kneehabacademy.com/free-evaluation">Book A Call<svg class="btn-arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </section>
 
