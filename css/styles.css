@@ -159,7 +159,7 @@ h3 {
 }
 
 /* ===== 4. LAYOUT & SECTIONS ===== */
-.section { padding-block: clamp(2.75rem, 2rem + 3.5vw, 5rem); position: relative; }
+.section { padding-block: clamp(2.25rem, 1.6rem + 2.8vw, 4rem); position: relative; }
 .section-dark   { background: var(--ink); }
 .section-darker { background: var(--ink-2); }
 .section-light  { background: var(--bone); color: var(--ink); }
@@ -730,8 +730,8 @@ h3 {
   background-size: 48px 48px;
   mask-image: radial-gradient(700px 500px at 80% 120%, #000, transparent 70%);
 }
-.final-inner { position: relative; text-align: center; max-width: 30ch; margin-inline: auto; }
-.final-cta .eyebrow { justify-content: center; }
+.final-inner { position: relative; text-align: center; max-width: 52ch; margin-inline: auto; }
+.final-cta .eyebrow { justify-content: center; font-size: 1rem; letter-spacing: 0.18em; }
 .final-body { max-width: 46ch; margin: 1.6rem auto 2.2rem; }
 .final-body p { font-size: 1.2rem; line-height: 1.5; color: #20240f; }
 .buy-price { margin: 0 0 1.4rem; }
@@ -884,7 +884,7 @@ h3 {
 /* Results carousel — category filter (homepage, own dark section) */
 .results-block { margin: 0; }
 .results-block .results-filter-label { color: var(--muted); }
-.results-block .carousel-count { color: var(--muted); }
+.results-block .carousel-count { color: var(--volt); font-size: 1.15rem; font-weight: 700; }
 .results-subhead { margin-bottom: 0.5rem; }
 .results-subtitle {
   font-family: var(--font-display); text-transform: uppercase;
@@ -990,6 +990,8 @@ h3 {
   color: var(--volt); margin: 0;
 }
 .product-card .btn { margin-top: auto; justify-content: center; }
+/* Make the whole product card clickable (stretched link); color dots stay above it */
+.product-card .btn::after { content: ""; position: absolute; inset: 0; z-index: 1; }
 
 /* Product color gallery — swipeable */
 .product-gallery {
@@ -1100,11 +1102,11 @@ h3 {
 #site-footer {
   background: var(--ink-2);
   border-top: 1px solid var(--line);
-  padding-block: clamp(3rem, 2rem + 3vw, 5rem) 2rem;
+  padding-block: clamp(2rem, 1.5rem + 1.5vw, 3rem) 1.5rem;
 }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr;
   gap: 2.5rem;
 }
 .footer-brand .logo { margin-bottom: 1.2rem; }
@@ -1123,7 +1125,7 @@ h3 {
 .footer-col a:hover { color: var(--volt); }
 .footer-bottom {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-  margin-top: 3rem; padding-top: 1.6rem;
+  margin-top: 1.75rem; padding-top: 1.6rem;
   border-top: 1px solid var(--line);
   font-family: var(--font-mono); font-size: 0.74rem;
   text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
@@ -1217,12 +1219,12 @@ body.nav-open-lock { overflow: hidden; }
 @media (max-width: 540px) {
   .who-grid, .testimonial-grid, .coach-grid, .review-grid, .ba-grid { grid-template-columns: 1fr; }
   /* Merch: one centered product per row on phones so each card + swipe gallery fits the viewport. */
-  .product-grid { grid-template-columns: 1fr; gap: 1.4rem; }
-  .product-card { max-width: 380px; width: 100%; margin-inline: auto; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+  .product-card { max-width: none; width: 100%; margin-inline: 0; }
   /* Keep big display headings inside the viewport. */
   .display-2xl, #hero-title { font-size: clamp(2.1rem, 1.2rem + 4.6vw, 2.9rem); }
   .display-xl { font-size: clamp(1.9rem, 1.2rem + 3.6vw, 2.5rem); }
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
   .deficit-list { gap: 0.5rem; }
   .outline { -webkit-text-stroke-width: 1.5px; }
   /* Full-width premium card on phones; keep the corner stamp inside the viewport. */
