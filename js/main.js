@@ -74,6 +74,45 @@
     showCat(resultsFilter.value);
   }
 
+  // --- Product color galleries (swipe + swatch dots) ---
+  document.querySelectorAll('[data-gallery]').forEach(function (gal) {
+    var track = gal.querySelector('.gallery-track');
+    var slides = gal.querySelectorAll('.gallery-slide');
+    var dots = gal.querySelectorAll('.gallery-dot');
+    if (!track || !slides.length) return;
+
+    var setActive = function (i) {
+      dots.forEach(function (d, di) {
+        var on = di === i;
+        d.classList.toggle('is-active', on);
+        d.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+    };
+
+    // Click a swatch -> scroll to that color.
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        var i = parseInt(dot.getAttribute('data-i'), 10) || 0;
+        gal.classList.add('is-touched');
+        track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        setActive(i);
+      });
+    });
+
+    // Sync active swatch with manual swipe/scroll.
+    var raf;
+    track.addEventListener('scroll', function () {
+      gal.classList.add('is-touched');
+      if (raf) return;
+      raf = requestAnimationFrame(function () {
+        raf = null;
+        var i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i < 0) i = 0; if (i > slides.length - 1) i = slides.length - 1;
+        setActive(i);
+      });
+    }, { passive: true });
+  }, this);
+
   // --- Sticky header state on scroll ---
   var header = document.getElementById('site-header');
   if (header) {
