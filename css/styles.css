@@ -181,22 +181,31 @@ h3 {
 }
 
 /* ===== 5. HEADER ===== */
-/* Full-width flat bar (no floating pill) */
+/* Floating rounded pill nav */
 #site-header {
   position: sticky; top: 0; z-index: 100;
-  padding-block: 0.55rem;
-  background: rgba(18,20,23,0.72);
-  -webkit-backdrop-filter: saturate(150%) blur(18px);
-  backdrop-filter: saturate(150%) blur(18px);
-  border-bottom: 1px solid var(--line);
-  transition: background .3s var(--ease);
+  padding: 1rem var(--space) 0;
+  transition: padding .3s var(--ease);
 }
-#site-header.is-scrolled { background: rgba(18,20,23,0.92); }
+#site-header.is-scrolled { padding-top: 0.5rem; }
 .header-inner {
   position: relative;
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.75rem;
-  min-height: 56px;
+  min-height: 60px;
+  padding-inline: 1.4rem;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px -34px rgba(0,0,0,0.85);
 }
+.header-inner::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  border-radius: inherit; pointer-events: none;
+  background: rgba(18,20,23,0.70);
+  -webkit-backdrop-filter: saturate(150%) blur(18px);
+  backdrop-filter: saturate(150%) blur(18px);
+  transition: background .3s var(--ease);
+}
+#site-header.is-scrolled .header-inner::before { background: rgba(18,20,23,0.92); }
 
 .logo {
   display: inline-flex; align-items: center; gap: 0.55rem;
@@ -227,8 +236,9 @@ h3 {
 .nav-open span { width: 26px; height: 2px; background: var(--bone); display: block; }
 .nav-close { display: none; background: none; border: 0; cursor: pointer; }
 
-/* Outline CTA — far right */
+/* Outline CTA — far right, pill-shaped (pill within a pill) */
 .header-cta { justify-self: end; }
+.btn.header-cta { border-radius: 100px; }
 
 /* Menu dropdown — anchored under the toggle (top-left) */
 #primary-nav {
