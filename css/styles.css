@@ -278,6 +278,11 @@ h3 {
 .hero-copy .lede { max-width: 46ch; margin: 0.7rem 0; }
 .hero-copy .lede-muted { font-size: 1rem; color: var(--muted); }
 .hero-copy .btn-lg { margin-top: 0.95rem; }
+/* Button sits above the hero video; ledes sit below it. Restore the spacing
+   that was previously scoped to .hero-copy so nothing collapses together. */
+.hero-video .btn-lg { margin-bottom: 1rem; }
+.hero-video .lede { max-width: 46ch; margin: 0.7rem 0; }
+.hero-video .lede-muted { font-size: 1rem; color: var(--muted); }
 
 /* Eyebrow as a pill badge */
 .eyebrow-pill {
@@ -385,6 +390,8 @@ h3 {
   font-size: clamp(0.9rem, 4.5vw, 2.1rem);
 }
 .hero-video-subcaption {
+  font-family: var(--font-display); letter-spacing: -0.01em;
+  text-transform: uppercase;
   font-weight: 700; color: var(--bone-2);
   font-size: clamp(0.98rem, 0.88rem + 0.4vw, 1.2rem);
 }
@@ -570,6 +577,35 @@ h3 {
   box-shadow: 0 0 30px -4px rgba(123,92,255,0.6);
 }
 .chain-link--focus .chain-part { color: var(--volt); }
+
+/* The Solution — three stacked, numbered parts */
+.solution-parts {
+  display: grid;
+  gap: clamp(2rem, 1.4rem + 2vw, 3.25rem);
+  margin-top: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem);
+}
+.solution-part {
+  display: grid;
+  grid-template-columns: minmax(0, 56px) 1fr;
+  gap: clamp(1rem, 0.6rem + 1.5vw, 2.25rem);
+  align-items: start;
+  padding-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+  border-top: 1px solid var(--line);
+}
+.solution-part:first-child { padding-top: 0; border-top: 0; }
+.solution-num {
+  font-family: var(--font-mono); font-weight: 700; line-height: 1;
+  font-size: clamp(1.1rem, 0.9rem + 0.8vw, 1.5rem);
+  color: var(--volt);
+}
+.solution-title {
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: -0.012em; line-height: 0.98;
+  font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.9rem);
+  margin: 0 0 0.9rem;
+}
+.solution-part-body .big-p { color: var(--muted); max-width: 60ch; margin: 0; }
+.solution-part-body .chain { margin-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem); max-width: 620px; }
 
 /* Method */
 .method-track { list-style: none; margin: 0; padding-left: 0; }
@@ -1152,12 +1188,13 @@ h3 {
     grid-template-columns: minmax(0, 1fr);
   }
   /* Stack the split and center the hero (text + video) on mobile. */
-  .hero-split { gap: clamp(2rem, 1.5rem + 3vw, 3rem); justify-items: center; }
+  .hero-split { gap: clamp(1rem, 0.5rem + 1.5vw, 1.6rem); justify-items: center; }
   .hero-arrow { display: none; }
   .hero-copy { max-width: 640px; margin-inline: auto; text-align: center; }
   #hero-title { margin-inline: auto; }
   .hero-copy .lede { margin-inline: auto; }
-  .hero-video { max-width: 720px; }
+  .hero-video { max-width: 720px; text-align: center; }
+  .hero-video .lede { margin-inline: auto; }
   .hero-video-caption { justify-content: center; text-align: center; margin-inline: auto; }
   .story-video { max-width: 560px; }
   .why-grid .chain { max-width: 560px; }
@@ -1231,6 +1268,9 @@ body.nav-open-lock { overflow: hidden; }
   .hero-video { max-width: none; }
   .hero-stamp { width: 78px; top: -22px; right: -2px; }
   .hero-stamp-ring text { font-size: 9px; }
+  /* Stack the part number above the title so the big headings get full width. */
+  .solution-part { grid-template-columns: 1fr; gap: 0.45rem; }
+  .solution-num { font-size: 0.95rem; }
 }
 
 /* ============================================================
